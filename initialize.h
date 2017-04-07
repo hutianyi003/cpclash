@@ -1,25 +1,25 @@
 #pragma once
-/*
-UNIT_TYPE, µ¥Î»ÀàÐÍ£º»ùµØ£¬²½±ø£¬Ì¹¿Ë£¬½¨Öþ£¬·É»ú
-ORIGIN_MAX_HEALTH, ÉúÃüÉÏÏÞ
-ORIGIN_MAX_SPEED, ×î´óËÙ¶È
-ORIGIN_SHOT_RANGE, Éä³Ì
-ORIGIN_DEFENSE, ·ÀÓù
-ORIGIN_ATTACK, ¹¥»÷
-SKILL_CD_1, ¼¼ÄÜ1CD
-SKILL_CD_2, ¼¼ÄÜ2CD
-MAX_ACCOUNT, ×î´óÊýÁ¿
-PEOPLE_COST, ÈË¿ÚÏûºÄ
-MONEY_COST, ½ðÇ®ÏûºÄ
-TECH_COST, ¿Æ¼¼ÏûºÄ
+/*  
+UNIT_TYPE, å•ä½ç±»åž‹ï¼šåŸºåœ°ï¼Œæ­¥å…µï¼Œå¦å…‹ï¼Œå»ºç­‘ï¼Œé£žæœº
+ORIGIN_MAX_HEALTH, ç”Ÿå‘½ä¸Šé™
+ORIGIN_MAX_SPEED, æœ€å¤§é€Ÿåº¦
+ORIGIN_SHOT_RANGE, å°„ç¨‹
+ORIGIN_DEFENSE, é˜²å¾¡
+ORIGIN_ATTACK, æ”»å‡»
+SKILL_CD_1, æŠ€èƒ½1CD
+SKILL_CD_2, æŠ€èƒ½2CD
+MAX_ACCOUNT, æœ€å¤§æ•°é‡
+PEOPLE_COST, äººå£æ¶ˆè€—
+MONEY_COST, é‡‘é’±æ¶ˆè€—
+TECH_COST, ç§‘æŠ€æ¶ˆè€—
 
-£¨1£©¼¼ÄÜÖ¸Áî½áËã£¨³ýÐ¡ÏÊÈâÕ¼Áì¼¼ÄÜ£©
-£¨2£©µ¥Î»ËÀÍöÅÐ¶¨
-£¨3) ÅÐ¶ÏÖ÷»ùµØÊÇ·ñ±»´Ý»Ù£¬Èô±»´Ý»ÙÔò½øÐÐÏà¹ØÊ¤¸ºÅÐ¶¨
-£¨4£©ÒÆ¶¯Ö¸Áî½áËã
-£¨5£©±øÖÖ»ñÈ¡Ö¸Áî½áËã
-£¨6£©Ð¡ÏÊÈâÕ¼Áì½¨Öþ
-£¨7£©»ØºÏ´ïµ½ÉÏÏÞÊ±½øÐÐÏà¹ØÊ¤¸ºÅÐ¶¨
+ï¼ˆ1ï¼‰æŠ€èƒ½æŒ‡ä»¤ç»“ç®—ï¼ˆé™¤å°é²œè‚‰å é¢†æŠ€èƒ½ï¼‰
+ï¼ˆ2ï¼‰å•ä½æ­»äº¡åˆ¤å®š
+ï¼ˆ3) åˆ¤æ–­ä¸»åŸºåœ°æ˜¯å¦è¢«æ‘§æ¯ï¼Œè‹¥è¢«æ‘§æ¯åˆ™è¿›è¡Œç›¸å…³èƒœè´Ÿåˆ¤å®š
+ï¼ˆ4ï¼‰ç§»åŠ¨æŒ‡ä»¤ç»“ç®—
+ï¼ˆ5ï¼‰å…µç§èŽ·å–æŒ‡ä»¤ç»“ç®—
+ï¼ˆ6ï¼‰å°é²œè‚‰å é¢†å»ºç­‘
+ï¼ˆ7ï¼‰å›žåˆè¾¾åˆ°ä¸Šé™æ—¶è¿›è¡Œç›¸dddddå…³èƒœè´Ÿåˆ¤å®š
 */
 #include<vector>
 extern int NOW_TURN;
@@ -28,27 +28,27 @@ using namespace std;
 #include"teamstyle18-my-1.h"
 
 /*
-±¾ÎÄ¼þËù¶¨Òå½Ó¿Ú£º
+æœ¬æ–‡ä»¶æ‰€å®šä¹‰æŽ¥å£ï¼š
 
-¶ÔÏó MY,EN£º
-°üº¬¼º·½ÓëµÐÈËµÄËùÓÐ×ÊÔ´Óëµ¥Î»vector<Unit*>£¬²»Í¬µÄµ¥Î»´æÔÚ²»Í¬µÄvectorÖÐ£¬Ò²ÓÐÕûÌåµÄ£¬
-°üº¬ËùÓÐµ¥Î»µÄvector:battle_unit,resourse_building,production_building,meat,»¹ÓÐÓ¢ÐÛµ¥Î»
-µÄÖ¸Õë
+å¯¹è±¡ MY,ENï¼š
+åŒ…å«å·±æ–¹ä¸Žæ•Œäººçš„æ‰€æœ‰èµ„æºä¸Žå•ä½vector<Unit*>ï¼Œä¸åŒçš„å•ä½å­˜åœ¨ä¸åŒçš„vectorä¸­ï¼Œä¹Ÿæœ‰æ•´ä½“çš„ï¼Œ
+åŒ…å«æ‰€æœ‰å•ä½çš„vector:battle_unit,resourse_building,production_building,meat,è¿˜æœ‰è‹±é›„å•ä½
+çš„æŒ‡é’ˆ
 
-¶ÔÏó NE£º
-ÖÐÁ¢½¨ÖþµÄvector<Unit*>
+å¯¹è±¡ NEï¼š
+ä¸­ç«‹å»ºç­‘çš„vector<Unit*>
 
-¶ÔÏó teamid
+å¯¹è±¡ teamid
 
-º¯Êývoid initialize(void)£º
-³õÊ¼»¯»òÕßË¢ÐÂËùÓÐÐÅÏ¢
+å‡½æ•°void initialize(void)ï¼š
+åˆå§‹åŒ–æˆ–è€…åˆ·æ–°æ‰€æœ‰ä¿¡æ¯
 
-¶ÔÏómap£º
-ÆäÄÚ½«µØÍ¼ÉÏµÄÃ¿Ò»¸ö½Úµã·â×°ÎªÒ»¸öpos_infoÀàµÄÊµÀý£¬Êµ¼ÊÉÏÒÔÒ»¸öpos_info pos[10000]µÄÐÎÊ½´¢´æ£¬
-µ«ÔÚµ÷ÓÃÊ±×îºÃÊ¹ÓÃpos_info&at(Position&)º¯Êý£¬ÒòÎªÆäÓÐ°²È«·À»¤»úÖÆ¡£
+å¯¹è±¡mapï¼š
+å…¶å†…å°†åœ°å›¾ä¸Šçš„æ¯ä¸€ä¸ªèŠ‚ç‚¹å°è£…ä¸ºä¸€ä¸ªpos_infoç±»çš„å®žä¾‹ï¼Œå®žé™…ä¸Šä»¥ä¸€ä¸ªpos_info pos[10000]çš„å½¢å¼å‚¨å­˜ï¼Œ
+ä½†åœ¨è°ƒç”¨æ—¶æœ€å¥½ä½¿ç”¨pos_info&at(Position&)å‡½æ•°ï¼Œå› ä¸ºå…¶æœ‰å®‰å…¨é˜²æŠ¤æœºåˆ¶ã€‚
 	{
-	¶ÔÏópos_info£º
-	°üº¬Î»ÓÚÆäÉÏµÄµÐÎÒµ¥Î»£¬½¨Öþ£¬ÒÔ¼°¾­¹ý¼ÆËãµÄÍþÐ²Öµ£¬µÐÎÒÕ½Á¦Öµ
+	å¯¹è±¡pos_infoï¼š
+	åŒ…å«ä½äºŽå…¶ä¸Šçš„æ•Œæˆ‘å•ä½ï¼Œå»ºç­‘ï¼Œä»¥åŠç»è¿‡è®¡ç®—çš„å¨èƒå€¼ï¼Œæ•Œæˆ‘æˆ˜åŠ›å€¼
 	}
 */
 static bool teamid;
@@ -73,7 +73,7 @@ namespace infomation
 			battle_unit.clear();
 			resourse_building.clear();
 			production_building.clear();
-			meat.clear();
+			meat.clear();d
 
 			hacker.clear();
 			battle_tank.clear();
@@ -83,7 +83,7 @@ namespace infomation
 			hack_lab.clear();
 			bid_lab.clear();
 			car_lab.clear();
-			elec_lab.clear();
+			elec_lab.clear();dddd
 			radiation_lab.clear();
 			uav_lab.clear();
 			aircraft_lab.clear();
@@ -210,16 +210,16 @@ namespace infomation
 				temp.building = input;
 			}
 		}
-		//¹¹Ôìµ¥ÀýÄ£Ê½
+		//æž„é€ å•ä¾‹æ¨¡å¼
 		map_info&operator=(map_info&) {}
-		//¹¹Ôìµ¥ÀýÄ£Ê½
+		//æž„é€ å•ä¾‹æ¨¡å¼
 
-		//¹¹Ôìµ¥ÀýÄ£Ê½
+		//æž„é€ å•ä¾‹æ¨¡å¼
 		map_info(map_info&) {}
 		pos_info*pos;
-		//°²È«¿ÕÎ»ÖÃ
+		//å®‰å…¨ç©ºä½ç½®
 		pos_info*null_pos;
-		//µØÍ¼Ë¢ÐÂº¯Êý
+		//åœ°å›¾åˆ·æ–°å‡½æ•°
 		void flush()
 		{
 			for (int iter = 0; iter != 10000; ++iter)
@@ -231,8 +231,8 @@ namespace infomation
 				this->pos->MY_force_val = 0;
 			}
 		}
-		//µØÍ¼¾í»ýº¯Êý
-		void in_range(float range, void func(Position&, Unit*), Position&pos, Unit*unit)//¶Ôµã½øÐÐÔÚrange·¶Î§ÄÚµ÷ÓÃfuncº¯Êý½øÐÐ¾í»ý£¬ÓÃÓÚÉú³ÉÊÆÁ¦Í¼
+		//åœ°å›¾å·ç§¯å‡½æ•°
+		void in_range(float range, void func(Position&, Unit*), Position&pos, Unit*unit)//å¯¹ç‚¹è¿›è¡Œåœ¨rangeèŒƒå›´å†…è°ƒç”¨funcå‡½æ•°è¿›è¡Œå·ç§¯ï¼Œç”¨äºŽç”ŸæˆåŠ¿åŠ›å›¾
 		{
 			if (range >= 1)
 			{
@@ -537,7 +537,7 @@ namespace infomation
 
 };
 
-//ÍþÐ²Öµ¼ÆËã
+//å¨èƒå€¼è®¡ç®—
 void threat(Position&pos, Unit*unit)
 {
 	if ((origin_attribute[unit->type_name][SKILL_CD_1] + unit->skill_last_release_time1) <= NOW_TURN)
@@ -546,13 +546,13 @@ void threat(Position&pos, Unit*unit)
 	}
 	return;
 }
-//µÐ·½Õ½Á¦
+//æ•Œæ–¹æˆ˜åŠ›
 void EN_force(Position&pos, Unit*unit)
 {
 	infomation::map.at(pos).EN_force_val += unit->attack_now*unit->health_now;
 	return;
 }
-//ÎÒ·½Õ½Á¦
+//æˆ‘æ–¹æˆ˜åŠ›
 void MY_force(Position&pos, Unit*unit)
 {
 	infomation::map.at(pos).MY_force_val -= unit->attack_now*unit->health_now;
